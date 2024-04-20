@@ -74,3 +74,4 @@ function toggleTheme() {
 
 // Event listener for the toggle button
 document.getElementById('toggleButton').addEventListener('click', toggleTheme);
+   

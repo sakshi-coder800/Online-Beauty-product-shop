@@ -75,3 +75,35 @@ function toggleTheme() {
 // Event listener for the toggle button
 document.getElementById('toggleButton').addEventListener('click', toggleTheme);
    
+
+
+
+  // AOS Animation
+  AOS.init({
+   disable: 'mobile',
+   duration: 1200,
+})
+
+// Get the button element
+var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Add scroll event listener to the window
+window.addEventListener("scroll", function() {
+    // Check if the scroll position is greater than or equal to 100 pixels
+    if (window.scrollY >= 100) {
+        // Display the scroll-to-top button
+        scrollToTopBtn.style.display = "block";
+    } else {
+        // Hide the scroll-to-top button
+        scrollToTopBtn.style.display = "none";
+    }
+});
+
+// Add click event listener to the button
+scrollToTopBtn.addEventListener("click", function() {
+    // Scroll to the top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Smooth scrolling animation
+    });
+});

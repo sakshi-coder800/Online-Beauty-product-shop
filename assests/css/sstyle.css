@@ -41,7 +41,7 @@
 }
 
 /* custom scroll bar ------------------- */
-
+/* 
 
 ::-webkit-scrollbar{
     width: 1rem;
@@ -54,9 +54,27 @@
  
  ::-webkit-scrollbar-thumb{
     background-color: var(--red);
- }
+ } */
 
  
+ /* Hide default scrollbar */
+::-webkit-scrollbar {
+   width: 0;
+   height: 0;
+   
+}
+
+/* Hide scrollbar track */
+::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+
+/* Hide scrollbar thumb */
+::-webkit-scrollbar-thumb {
+   background-color: transparent;
+}
+
+
 
 html{
     font-size: 62.5%;
@@ -891,3 +909,13 @@ section{
   }
   
 
+  #scrollToTopBtn{
+   position: fixed;
+   bottom: 77px;
+   right: 20px;
+   background: var(--red);
+   padding: 10px;
+   color: var(--white);
+   border-radius: 1rem;
+   font-size: 1.5rem; cursor: pointer;
+}
